@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/Console"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:text="Hello"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/circle_faded" />
+
+    <ImageButton
+        android:id="@+id/TrackBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:cropToPadding="false"
+        android:paddingLeft="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/circle" />
+
+    <Button
+        android:id="@+id/arduConnect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:onClick="onConnectToArduino"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Console"
+        android:text="ArduConnect" />
+
+    <Button
+        android:id="@+id/btConnect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sync"
+        android:layout_alignBottom="@+id/sync"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:onClick="onActivateBt"
+        android:text="BtActivate" />
+
+    <Button
+        android:id="@+id/sync"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:onClick="onSync"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/arduConnect"
+        android:layout_alignBottom="@+id/arduConnect"
+        android:layout_centerHorizontal="true"
+        android:text="Sync" />
+
+</RelativeLayout>
